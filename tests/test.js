@@ -22,16 +22,22 @@ const xmlParser = require('fast-xml-parser')
 const fs = require('fs')
 const path = require('path')
 
-const xmlDataPath = './'
-const csvFileOut = 'NFe2CSV.csv'
-const xmlTestFile = 'nfe.xml'
-//####[ Testing ]############################
+const xmlDataPath = './nfe'
+const csvFileOut = 'NFe2CSV.test.csv'
+const xmlTestFile = 'nfe-1.xml'
+//####[ View XML structure ]############################
+console.log('Object converted structure:')
 const xmlTestData = fs.readFileSync(path.join(xmlDataPath, xmlTestFile), 'utf8')
 const jsonObj = xmlParser.parse(xmlTestData, {parseNodeValue: false})
 console.log(jsonObj)
 //####[ Main ]###############################
 console.log('Starting...')
-console.log(xmlDataPath)
-const nfe2csv = new NFeToCSV(xmlDataPath, csvFileOut)
-nfe2csv.fit(fromHeader=false, toHeader=true)
+console.log('XML path:', xmlDataPath)
+const nfe2csv = new NFeToCSV(xmlDataPath)
+nfe2csv.fit(csvFileOut, {fromHeader: false, toHeader: true})
+console.log('Summary:')
+console.log('-----------')
+console.log('XML files found:', nfe2csv.xmlFilesCount)
+console.log('NF-e files processed:', nfe2csv.nfeFilesCount)
+console.log('-----------')
 console.log('Done.')
