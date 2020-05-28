@@ -1,6 +1,6 @@
 {
   "name": "nfe2csv",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Gerar um arquivo CSV dado um ou mais XML de NFe",
   "main": "main.js",
   "scripts": {
