@@ -1,0 +1,8 @@
+node_modules
+out
+npm-debug.log
+build
+dist
+
+# MacOS .DS_Store
+.DS_Store

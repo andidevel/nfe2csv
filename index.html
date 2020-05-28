@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <title>NFe2CSV</title>
+    </head>
+    <body>
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <main role="main" class="inner cover">
+                <div class="text-center">
+                    <h1 class="cover-heading">NF-e para CSV</h1>
+                    <p class="lead">
+                        Converter um ou mais arquivos <strong>XML</strong> do tipo <strong>NFe</strong> para um arquivo 
+                        do tipo <strong>CSV</strong> que pode ser aberto em qualquer planilha eletrônica.
+                    </p>
+                    <p class="lead">Versão <span class="badge badge-success" id="appVersion">...</span></p>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <label for="xmlFolder">Local dos arquivos NFe</label>
+                        <div class="input-group">
+                            <input type="text" id="xmlFolder" class="form-control" disabled>
+                            <div class="input-group-append">
+                                <buton type="button" class="btn btn-outline-secondary" id="btXmlIn">
+                                    <i class="fas fa-folder-open"></i>
+                                </buton>
+                            </div>
+                        </div>
+                        <label for="csvOut">Arquivo CSV de saída</label>
+                        <div class="input-group">
+                            <input type="text" id="csvOut" class="form-control" disabled>
+                            <div class="input-group-append">
+                                <buton type="button" class="btn btn-outline-secondary" id="btCsvOut">
+                                    <i class="fas fa-file"></i>
+                                </buton>
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="col-4">
+                        <h5>Incluir dados do:</h5>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="ckEmit" checked>
+                            <label for="ckEmit" class="custom-control-label">Emissor</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="ckDest" checked>
+                            <label for="ckDest" class="custom-control-label">Destinatário</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <button type="button" class="btn btn-secondary" id="btGo">
+                        <i class="fas fa-exchange-alt"></i> Converter
+                    </button>
+                </div>
+            </main>
+            <footer class="mt-auto">
+                <div class="inner text-center">
+                    <p>Copyright &copy; 2020 <strong class="text-white">Anderson R. Livramento</strong></p>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript">
+            require('./renderer-process/main-window')
+        </script>
+    </body>
+</html>

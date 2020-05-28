@@ -1,0 +1,36 @@
+{
+  "name": "nfe2csv",
+  "version": "0.0.1",
+  "description": "Gerar um arquivo CSV dado um ou mais XML de NFe",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --debug",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "pack-win": "electron-builder --dir --win",
+    "dist-win": "electron-builder --win"
+  },
+  "keywords": [
+    "NFe",
+    "CSV"
+  ],
+  "author": "Anderson R. Livramento <catfishlabs.com>",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "fast-xml-parser": "^3.17.1",
+    "glob": "^7.1.6"
+  },
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "electron-builder": "^22.6.1"
+  },
+  "build": {
+    "appId": "com.catfishlabs.NFe2CSV",
+    "win": {
+      "target": [
+        "zip"
+      ]
+    }
+  }
+}
