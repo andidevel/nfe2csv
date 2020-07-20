@@ -18,12 +18,12 @@
   "author": "Anderson R. Livramento <catfishlabs.com>",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "fast-xml-parser": "^3.17.1",
+    "fast-xml-parser": "^3.17.4",
     "glob": "^7.1.6"
   },
   "devDependencies": {
-    "electron": "^9.0.0",
-    "electron-builder": "^22.6.1"
+    "electron": "^9.1.0",
+    "electron-builder": "^22.7.0"
   },
   "build": {
     "appId": "com.catfishlabs.NFe2CSV",
