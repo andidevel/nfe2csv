@@ -22,7 +22,7 @@
     "glob": "^7.1.6"
   },
   "devDependencies": {
-    "electron": "^9.3.2",
+    "electron": "^9.4.0",
     "electron-builder": "^22.8.1"
   },
   "build": {
