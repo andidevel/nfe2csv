@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "electron": "^9.4.4",
-    "electron-builder": "^22.11.2"
+    "electron-builder": "^22.11.7"
   },
   "build": {
     "appId": "com.catfishlabs.NFe2CSV",
